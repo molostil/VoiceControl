@@ -3,24 +3,30 @@
  * https://github.com/facebook/react-native
  * @flow
  */
+        /* <VoiceRecognitionButton></VoiceRecognitionButton> */
+        
 
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
-  Text,
-  View,
-  Button
+  View
 } from 'react-native';
 
-import VoiceRecognition from './VoiceRecognition'
+import VoiceRecognitionButton from './VoiceRecognitionButton'
+import VoiceRecognitionEndless from './VoiceRecognitionEndless'
 
 export default class App extends Component {
 
   render() {
     return (
       <View style={styles.container}>
-        <VoiceRecognition></VoiceRecognition>
+        {/* Apparently it's not possible to import two instances      */}
+        {/* of Voice in one App, so you have to choose which kind of  */}
+        {/* voice recognition should be used                          */}
+        {/* WARNING: Endless recognition is still in progress         */}
+
+        {/* <VoiceRecognitionEndless></VoiceRecognitionEndless> */}
+        <VoiceRecognitionButton></VoiceRecognitionButton>
       </View>
     );
   }

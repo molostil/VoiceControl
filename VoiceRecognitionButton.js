@@ -4,14 +4,13 @@ import {
   Text,
   View,
   Button,
-  TouchableHighlight,
 } from 'react-native';
 
 import TextToSpeech from './TextToSpeech'
 
 import Voice from 'react-native-voice';
 
-export default class VoiceRecognition extends Component {
+export default class VoiceRecognitionButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
